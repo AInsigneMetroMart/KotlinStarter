@@ -1,0 +1,141 @@
+<resources>
+
+    <style name="Text">
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+
+    <style name="Text.Title" />
+
+    <style name="Text.Heading" />
+
+    <style name="Text.Body" />
+
+    <style name="Text.Label" />
+
+    <style name="Text.Link">
+        <item name="android:textColor">@color/text_action</item>
+    </style>
+
+    <style name="Text.Title.1">
+        <item name="android:textSize">@dimen/font_size_title_1</item>
+    </style>
+
+    <style name="Text.Title.1.Secondary">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="Text.Heading.1">
+        <item name="android:textSize">@dimen/font_size_heading_1</item>
+    </style>
+
+    <style name="Text.Heading.1.Secondary">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="Text.Heading.2">
+        <item name="android:textSize">@dimen/font_size_heading_2</item>
+    </style>
+
+    <style name="Text.Heading.2.Secondary">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="Text.Heading.3">
+        <item name="android:textSize">@dimen/font_size_heading_3</item>
+    </style>
+
+    <style name="Text.Heading.3.Secondary">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="Text.Heading.4">
+        <item name="android:textSize">@dimen/font_size_heading_4</item>
+    </style>
+
+    <style name="Text.Heading.4.Secondary">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="Text.Heading.5">
+        <item name="android:textSize">@dimen/font_size_heading_5</item>
+    </style>
+
+    <style name="Text.Heading.5.Secondary">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="Text.Body.1">
+        <item name="android:textSize">@dimen/font_size_body_1</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="Text.Body.1.Secondary">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="Text.Body.1.Strong">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Text.Body.1.Strong.Secondary">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="Text.Body.2">
+        <item name="android:textSize">@dimen/font_size_body_2</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="Text.Body.2.Secondary">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="Text.Body.2.Tertiary">
+        <item name="android:textColor">@color/text_tertiary</item>
+    </style>
+
+    <style name="Text.Body.2.Strong">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Text.Body.2.Strong.Secondary">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="Text.Label.1">
+        <item name="android:textSize">@dimen/font_size_label_1</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="Text.Label.1.Secondary">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="Text.Label.2">
+        <item name="android:textSize">@dimen/font_size_label_2</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="Text.Label.2.Secondary">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="Text.Label.2.Tertiary">
+        <item name="android:textColor">@color/text_tertiary</item>
+    </style>
+
+    <style name="Text.Link.1">
+        <item name="android:textSize">@dimen/font_size_link_1</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Text.Link.2">
+        <item name="android:textSize">@dimen/font_size_link_2</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Text.Link.1.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@dimen/notification_radius" />
+    <solid android:color="@color/color_on_bg_notification" />
+</shape>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="drag_notification_room_margin">4dp</dimen>
+    <dimen name="message_confirm_max_width_content">500dp</dimen>
+</resources>

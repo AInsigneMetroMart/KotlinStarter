@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "970206202745",
+    "project_id": "kotlinstarter-2258d",
+    "storage_bucket": "kotlinstarter-2258d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:970206202745:android:a651398335095529d9bda8",
+        "android_client_info": {
+          "package_name": "io.ainsigne.kotlinstarter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "970206202745-4m83c98um47ouihvq4f2chiepfbu63eq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArheXWVefwOzKAolx_PeFgVyrXxnb0PN4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "970206202745-4m83c98um47ouihvq4f2chiepfbu63eq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:970206202745:android:d5a5ac3d5e1299f6d9bda8",
+        "android_client_info": {
+          "package_name": "io.ainsigne.kotlinstarter.metromart.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "970206202745-4m83c98um47ouihvq4f2chiepfbu63eq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArheXWVefwOzKAolx_PeFgVyrXxnb0PN4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "970206202745-4m83c98um47ouihvq4f2chiepfbu63eq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SpecFragment">
+
+    <include android:id="@+id/container_colors"
+        layout="@layout/fragment_kichen_sink_colors" android:visibility="gone" />
+    <include android:id="@+id/container_buttons"
+        layout="@layout/fragment_kitchen_sink_buttons" android:visibility="visible" />
+    <include android:id="@+id/container_typo"
+        layout="@layout/fragment_kitchen_sink_typography" android:visibility="gone" />
+    <include android:id="@+id/container_widget"
+        layout="@layout/fragment_kitchen_sink_widget" android:visibility="gone" />
+    <include android:id="@+id/container_form"
+        layout="@layout/fragment_kitchen_sink_form" android:visibility="gone" />
+</RelativeLayout>

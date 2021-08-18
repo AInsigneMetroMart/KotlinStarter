@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spacing based on the iOS app   -->
+    <dimen name="spacing_xxs">2dp</dimen>
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_s">8dp</dimen>
+    <dimen name="spacing_sm">12dp</dimen>
+    <dimen name="spacing_m">16dp</dimen>
+    <dimen name="spacing_l">24dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+    <dimen name="spacing_xxl">48dp</dimen>
+    <dimen name="spacing_xxxl">64dp</dimen>
+    <dimen name="spacing_xxxxl">72dp</dimen>
+
+    <!-- font sizes  -->
+    <dimen name="font_size_title_1">40sp</dimen>
+    <dimen name="font_size_heading_1">32sp</dimen>
+    <dimen name="font_size_heading_2">28sp</dimen>
+    <dimen name="font_size_heading_3">24sp</dimen>
+    <dimen name="font_size_heading_4">20sp</dimen>
+    <dimen name="font_size_heading_5">18sp</dimen>
+
+    <dimen name="font_size_body_1">16sp</dimen>
+    <dimen name="font_size_body_2">14sp</dimen>
+
+    <dimen name="font_size_label_1">14sp</dimen>
+    <dimen name="font_size_label_2">12sp</dimen>
+
+    <dimen name="font_size_link_1">16sp</dimen>
+    <dimen name="font_size_link_2">14sp</dimen>
+
+
+    <dimen name="button_elevation_material">3dp</dimen>
+    <dimen name="button_pressed_z_material">4dp</dimen>
+    <!-- Elevation when button is pressed -->
+    <dimen name="button_radius">40dp</dimen>
+    <!-- Z translation to apply when button is pressed -->
+
+    <dimen name="card_corner_radius_bottomSheet">24dp</dimen>
+    <dimen name="card_radius">12dp</dimen>
+    <dimen name="notification_radius">4dp</dimen>
+    <dimen name="button_secondary_border">1dp</dimen>
+    <dimen name="button_tertiary_border">1dp</dimen>
+
+</resources>

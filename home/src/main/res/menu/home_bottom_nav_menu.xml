@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/navigation_shop"
+        android:icon="@drawable/ic_launcher_foreground"
+        app:showAsAction="always"
+        android:title="Shops" />
+    <item
+        android:id="@+id/navigation_specsheet"
+        android:icon="@drawable/ic_launcher_foreground"
+        app:showAsAction="always"
+        android:title="SpecSheet" />
+    <item
+        android:id="@+id/navigation_shop_sample"
+        android:icon="@drawable/ic_launcher_foreground"
+        app:showAsAction="always"
+        android:title="Shop Sample" />
+</menu>

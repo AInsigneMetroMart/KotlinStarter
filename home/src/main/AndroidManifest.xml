@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="io.ainsigne.home">
+
+    <dist:module
+        dist:instant="false"
+        dist:title="@string/title_home">
+        <dist:delivery>
+            <dist:install-time />
+        </dist:delivery>
+        <dist:fusing dist:include="true" />
+    </dist:module>
+
+    <application>
+        <activity
+            android:name=".HomeActivity"
+            android:configChanges="keyboardHidden"
+            tools:ignore="Instantiatable" />
+    </application>
+</manifest>

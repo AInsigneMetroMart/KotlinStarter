@@ -1,7 +1,15 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'io.gitlab.arturbosch.detekt'
 }
+//def keystorePropertiesFile = rootProject.file("keystore.properties")
+//def keystoreProperties = new Properties()
+//keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
 android {
     compileSdkVersion 30
@@ -13,7 +21,8 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -30,16 +39,147 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+    }
+
+    flavorDimensions "default"
+
+    productFlavors {
+        metromart {
+            applicationIdSuffix = ".metromart"
+            dimension "default"
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug
+
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            debuggable false
+        }
+
+        stage {
+            applicationIdSuffix ".debug"
+            signingConfig signingConfigs.debug
+
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            debuggable true
+
+            matchingFallbacks = ['release']
+        }
+
+        debug {
+            applicationIdSuffix ".debug"
+
+            signingConfig signingConfigs.debug
+
+            minifyEnabled false
+
+            debuggable true
+        }
+    }
+
+    dynamicFeatures = [':shop', ':shop', ':browse', ':browse', ':orderagain', ':savings', ':home', ':stores', ':specsheet']
 }
 
 dependencies {
+    api project(':analytics')
+    api project(':utilities')
+    api project(':ui')
+    api project(':repository')
+    api project(':service')
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.6.0'
-    implementation 'androidx.appcompat:appcompat:1.3.1'
-    implementation 'com.google.android.material:material:1.4.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    api otherLibraries.multidex
+
+    implementation otherLibraries.kotlin
+    implementation otherLibraries.coroutineCore
+
+    api supportDependencies.codeKtx
+    implementation supportDependencies.appCompat
+    implementation supportDependencies.design
+    implementation supportDependencies.fragment
+    implementation supportDependencies.navigationUi
+    api supportDependencies.lifecycleViewModelKtx
+    api supportDependencies.lifecycleLiveDataKtx
+    implementation supportDependencies.commonJava8
+
+    implementation injection.dagger
+    kapt injection.daggerKapt
+
+    implementation otherLibraries.timber
+    implementation otherLibraries.gson
+    implementation otherLibraries.browser
+    implementation network.retrofit
+    implementation network.retrofitGson
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.3.1'
+
+    // Stetho
+    implementation 'com.facebook.stetho:stetho:1.5.0'
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+
+    // firebase
+    implementation platform(otherLibraries.firebaseBom)
+    implementation otherLibraries.firebaseAnalytics
+    implementation otherLibraries.firebaseCrashlytics
+    implementation otherLibraries.firebaseRemoteConfig
+    implementation otherLibraries.firebasePerformance
+
+    implementation ui.constraintLayout
+    implementation ui.lottie
+
+    api supportDependencies.extensions
+
+    implementation "androidx.security:security-crypto:1.1.0-alpha01"
+
+    testImplementation testLibraries.junit
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    androidTestImplementation 'androidx.test:rules:1.3.0'
+    androidTestImplementation 'androidx.test:runner:1.3.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test:core-ktx:1.3.0'
+    androidTestImplementation 'androidx.test.ext:junit-ktx:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    testImplementation testLibraries.coretest
+}
+
+detekt {
+    input = files(                                        // The directories where detekt looks for source files. Defaults to `files("src/main/java", "src/main/kotlin")`.
+            "src/main/kotlin",
+            "src/main/java"
+    )
+    parallel = false
+    // Builds the AST in parallel. Rules are always executed in parallel. Can lead to speedups in larger projects. `false` by default.
+    config = files("../quality/detekt_app_config.yml")
+    // Define the detekt configuration(s) you want to use. Defaults to the default detekt configuration.
+    buildUponDefaultConfig = false
+    // Interpret config files as updates to the default config. `false` by default.
+//    baseline = file("path/to/baseline.xml")               // Specifying a baseline file. All findings stored in this file in subsequent runs of detekt.
+//    disableDefaultRuleSets = false                        // Disables all default detekt rulesets and will only run detekt with custom rules defined in plugins passed in with `detektPlugins` configuration. `false` by default.
+    debug = false
+    // Adds debug output during task execution. `false` by default.
+    ignoreFailures = false
+    // If set to `true` the build does not fail when the maxIssues count was reached. Defaults to `false`.
+    reports {
+        xml {
+            enabled = true
+            // Enable/Disable XML report (default: true)
+            destination = file("build/reports/detekt.xml")
+            // Path where XML report will be stored (default: `build/reports/detekt/detekt.xml`)
+        }
+        html {
+            enabled = true
+            // Enable/Disable HTML report (default: true)
+            destination = file("build/reports/detekt.html")
+            // Path where HTML report will be stored (default: `build/reports/detekt/detekt.html`)
+        }
+    }
 }

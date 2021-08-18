@@ -1,0 +1,76 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += [
+                        "room.schemaLocation"  : "$projectDir/schemas".toString(),
+                        "room.incremental"     : "true",
+                        "room.expandProjection": "true"]
+            }
+        }
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        stage {}
+        debug {}
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+        test.java.srcDirs += 'src/test/kotlin'
+    }
+}
+
+dependencies {
+    implementation project(':service')
+    implementation project(':utilities')
+    api project(':cache')
+
+    implementation 'com.auth0.android:jwtdecode:2.0.0'
+
+    implementation "com.lyft.kronos:kronos-android:0.0.1-alpha11"
+
+    implementation supportDependencies.supportAnnotation
+    implementation supportDependencies.appCompat
+
+    implementation otherLibraries.kotlin
+    implementation otherLibraries.coroutineCore
+    implementation otherLibraries.timber
+
+    implementation network.retrofitGson
+    implementation network.retrofit
+
+    api database.room
+    api database.roomKtx
+    kapt database.roomAnnotation
+
+    testImplementation testLibraries.junit
+    testImplementation testLibraries.cortest
+    testImplementation testLibraries.coretest
+}

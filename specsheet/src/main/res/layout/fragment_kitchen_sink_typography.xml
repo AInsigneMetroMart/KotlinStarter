@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/recycler_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            style="@style/Text.Title.1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Text.Title.1" />
+
+        <TextView
+            style="@style/Text.Title.1.Secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Text.Title.1.Secondary" />
+
+        <TextView
+            style="@style/Text.Heading.1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Text.Heading.1" />
+
+        <TextView
+            style="@style/Text.Heading.1.Secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Text.Heading.1.Secondary" />
+
+        <TextView
+            style="@style/Text.Heading.2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Text.Heading.2" />
+
+        <TextView
+            style="@style/Text.Heading.2.Secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Text.Heading.2.Secondary" />
+
+        <TextView
+            style="@style/Text.Heading.3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Text.Heading.3" />
+
+        <TextView
+            style="@style/Text.Heading.3.Secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Text.Heading.3.Secondary" />
+
+        <TextView
+            style="@style/Text.Heading.4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Text.Heading.4" />
+
+        <TextView
+            style="@style/Text.Heading.4.Secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Text.Heading.4.Secondary" />
+
+        <TextView
+            style="@style/Text.Heading.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Text.Heading.5" />
+
+        <TextView
+            style="@style/Text.Heading.5.Secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Text.Heading.5.Secondary" />
+
+
+        <TextView
+            style="@style/Text.Body.1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Text.Body.1" />
+
+        <TextView
+            style="@style/Text.Body.1.Secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Text.Body.1.Secondary" />
+
+        <TextView
+            style="@style/Text.Body.1.Strong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Text.Body.1.Strong" />
+
+        <TextView
+            style="@style/Text.Body.1.Strong.Secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Text.Body.1.Strong.Secondary" />
+
+        <TextView
+            style="@style/Text.Body.2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Text.Body.2" />
+
+        <TextView
+            style="@style/Text.Body.2.Secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Text.Body.2.Secondary" />
+
+        <TextView
+            style="@style/Text.Body.2.Strong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Text.Body.2.Strong" />
+
+        <TextView
+            style="@style/Text.Body.2.Strong.Secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Text.Body.2.Strong.Secondary" />
+
+
+        <TextView
+            style="@style/Text.Label.1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Text.Label.1" />
+
+        <TextView
+            style="@style/Text.Label.1.Secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Text.Label.1.Secondary" />
+
+        <TextView
+            style="@style/Text.Label.2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Text.Label.2" />
+
+        <TextView
+            style="@style/Text.Label.2.Secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Text.Label.2.Secondary" />
+
+        <TextView
+            style="@style/Text.Link.1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Text.Link.1" />
+
+        <TextView
+            style="@style/Text.Link.2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Text.Link.2" />
+
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,48 @@
+<resources>
+
+    <!--  Edit text styles -->
+    <style name="edit_error_text" parent="Text.Body.2">
+        <item name="android:textColor">@color/inline_error</item>
+    </style>
+
+    <style name="edit_hint_text" parent="Text.Label.1">
+        <item name="android:textColor">@color/text_hint</item>
+    </style>
+
+    <style name="InputText" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="errorTextAppearance">@style/edit_error_text</item>
+        <item name="android:textColor">@color/color_states_input_text</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="boxStrokeColor">@color/color_states_input_bg_outline</item>
+        <item name="boxStrokeErrorColor">@color/inline_error</item>
+        <item name="boxBackgroundColor">@color/color_states_input_bg</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.KotlinStarter.EditText</item>
+    </style>
+
+    <style name="InputText.WithButton" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:textColor">@color/txt_on_secondary_button</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="boxStrokeColor">@color/palette_red_100</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="boxBackgroundColor">@color/color_states_input_bg</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.KotlinStarter.EditText</item>
+        <item name="android:enabled">true</item>
+        <item name="android:focusable">false</item>
+    </style>
+
+
+    <style name="InputText.DropDown" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+        <item name="errorTextAppearance">@style/edit_error_text</item>
+        <item name="android:textColor">@color/color_states_input_text</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="boxBackgroundColor">@color/color_states_input_bg</item>
+        <item name="boxStrokeColor">@color/color_states_input_bg_outline</item>
+        <item name="boxStrokeErrorColor">@color/inline_error</item>
+        <item name="android:textColorHint">@color/color_states_input_hint</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.KotlinStarter.EditText</item>
+    </style>
+
+</resources>

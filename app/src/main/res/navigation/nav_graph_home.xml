@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_navigation"
+    app:startDestination="@+id/navigation_specsheet">
+
+    <fragment
+        android:id="@+id/navigation_shop"
+        android:name="io.ainsigne.shop.ShopFragment"
+        android:label="Shops" >
+        <action app:destination="@id/navigation_shop_sample" android:id="@+id/action_shop_to_shop_sample" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_specsheet"
+        android:name="io.ainsigne.specsheet.SpecSheetFragment"
+        android:label="SpecSheet" >
+        <action app:destination="@id/navigation_spec" android:id="@+id/action_specsheet_to_spec" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_spec"
+        android:name="io.ainsigne.specsheet.SpecFragment"
+        android:label="Spec" >
+        <argument app:argType="string" android:name="spec" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_shop_sample"
+        android:name="io.ainsigne.shop.ShopSampleFragment"
+        android:label="ShopSample" >
+    </fragment>
+
+
+</navigation>

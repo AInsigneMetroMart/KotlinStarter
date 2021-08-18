@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_title_shop">Shop</string>
+    <string name="home_title_browse">Browse</string>
+    <string name="home_title_savings">Savings</string>
+    <string name="home_title_order_again">Order Again</string>
+</resources>

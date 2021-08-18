@@ -1,0 +1,37 @@
+plugins {
+    id 'com.android.dynamic-feature'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
+}
+apply from: "../feature_module.gradle"
+
+android {
+    with defaultFeatureModuleConfig
+
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+    }
+}
+
+
+dependencies {
+    implementation project(":app")
+
+    implementation otherLibraries.kotlin
+    implementation otherLibraries.coroutineCore
+
+    implementation supportDependencies.codeKtx
+    implementation supportDependencies.appCompat
+    implementation supportDependencies.design
+    implementation supportDependencies.fragment
+    implementation supportDependencies.navigationUi
+    implementation ui.lottie
+    implementation ui.constraintLayout
+
+    implementation injection.dagger
+    kapt injection.daggerKapt
+
+    implementation otherLibraries.timber
+}
