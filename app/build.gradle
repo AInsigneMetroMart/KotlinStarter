@@ -6,7 +6,8 @@ plugins {
     id 'com.google.firebase.crashlytics'
     id 'androidx.navigation.safeargs.kotlin'
     id 'io.gitlab.arturbosch.detekt'
-    id "org.jetbrains.dokka" version "1.4.30"
+    id 'org.jetbrains.dokka'
+
 }
 //def keystorePropertiesFile = rootProject.file("keystore.properties")
 //def keystoreProperties = new Properties()
@@ -40,6 +41,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
 
     buildFeatures {
         viewBinding = true
@@ -88,23 +90,10 @@ android {
         }
     }
 
-    sourceSets {
-        main.java.srcDirs += '../repository/src/main/java'
-        main.java.srcDirs += '../analytics/src/main/java'
-        main.java.srcDirs += '../browse/src/main/java'
-        main.java.srcDirs += '../cache/src/main/java'
-        main.java.srcDirs += '../home/src/main/java'
-        main.java.srcDirs += '../orderagain/src/main/java'
-        main.java.srcDirs += '../savings/src/main/java'
-        main.java.srcDirs += '../service/src/main/java'
-        main.java.srcDirs += '../shop/src/main/java'
-        main.java.srcDirs += '../specsheet/src/main/java'
-        main.java.srcDirs += '../stores/src/main/java'
-        main.java.srcDirs += '../ui/src/main/java'
-        main.java.srcDirs += '../utilities/src/main/java'
-    }
+
     dynamicFeatures = [':shop', ':shop', ':browse', ':browse', ':orderagain', ':savings', ':home', ':stores', ':specsheet']
 }
+
 
 dependencies {
     api project(':analytics')
@@ -117,7 +106,6 @@ dependencies {
 
     implementation otherLibraries.kotlin
     implementation otherLibraries.coroutineCore
-
     api supportDependencies.codeKtx
     implementation supportDependencies.appCompat
     implementation supportDependencies.design
@@ -158,12 +146,11 @@ dependencies {
     testImplementation testLibraries.junit
     implementation 'com.github.bumptech.glide:glide:4.12.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
-    androidTestImplementation 'androidx.test:rules:1.3.0'
-    androidTestImplementation 'androidx.test:runner:1.3.0'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test:core-ktx:1.3.0'
-    androidTestImplementation 'androidx.test.ext:junit-ktx:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    androidTestImplementation testLibraries.testrule
+    androidTestImplementation testLibraries.testrunner
+    androidTestImplementation testLibraries.junitext
+    androidTestImplementation testLibraries.testcore
+    androidTestImplementation testLibraries.espresso
     testImplementation testLibraries.coretest
 }
 
