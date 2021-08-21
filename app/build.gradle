@@ -6,6 +6,7 @@ plugins {
     id 'com.google.firebase.crashlytics'
     id 'androidx.navigation.safeargs.kotlin'
     id 'io.gitlab.arturbosch.detekt'
+    id "org.jetbrains.dokka" version "1.4.30"
 }
 //def keystorePropertiesFile = rootProject.file("keystore.properties")
 //def keystoreProperties = new Properties()
@@ -87,6 +88,21 @@ android {
         }
     }
 
+    sourceSets {
+        main.java.srcDirs += '../repository/src/main/java'
+        main.java.srcDirs += '../analytics/src/main/java'
+        main.java.srcDirs += '../browse/src/main/java'
+        main.java.srcDirs += '../cache/src/main/java'
+        main.java.srcDirs += '../home/src/main/java'
+        main.java.srcDirs += '../orderagain/src/main/java'
+        main.java.srcDirs += '../savings/src/main/java'
+        main.java.srcDirs += '../service/src/main/java'
+        main.java.srcDirs += '../shop/src/main/java'
+        main.java.srcDirs += '../specsheet/src/main/java'
+        main.java.srcDirs += '../stores/src/main/java'
+        main.java.srcDirs += '../ui/src/main/java'
+        main.java.srcDirs += '../utilities/src/main/java'
+    }
     dynamicFeatures = [':shop', ':shop', ':browse', ':browse', ':orderagain', ':savings', ':home', ':stores', ':specsheet']
 }
 

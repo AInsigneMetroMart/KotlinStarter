@@ -31,7 +31,7 @@ class MMApplication : MultiDexApplication(), AppComponentProvider {
         appComponent = createDependencyInjector().build()
     }
 
-    open fun createDependencyInjector(): DaggerAppComponent.Builder {
+    fun createDependencyInjector(): DaggerAppComponent.Builder {
         return DaggerAppComponent
             .builder()
             .appModule(AppModule(this))
