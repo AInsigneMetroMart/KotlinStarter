@@ -10,7 +10,8 @@
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
         android:orientation="vertical">
-
+        android:textColor="@color/_f51551"
+        android:fontFamily="@font/roboto_medium"
         <com.google.android.material.button.MaterialButton
             style="@style/Button.Primary"
             android:layout_width="wrap_content"
@@ -102,60 +103,6 @@
             android:text="Button.Secondary.Small disabled"
             app:icon="@drawable/ic_close" />
 
-        <com.google.android.material.button.MaterialButton
-            style="@style/Button.Text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Button.Text enabled" />
 
-        <com.google.android.material.button.MaterialButton
-            style="@style/Button.Text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Button.Text enabled"
-            app:icon="@drawable/ic_close" />
-
-        <com.google.android.material.button.MaterialButton
-            style="@style/Button.Text.Small"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Button.Text.Small enabled" />
-
-        <com.google.android.material.button.MaterialButton
-            style="@style/Button.Text.Small"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Button.Text.Small enabled"
-            app:icon="@drawable/ic_close" />
-
-        <com.google.android.material.button.MaterialButton
-            style="@style/Button.Text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:enabled="false"
-            android:text="Button.Text disabled" />
-
-        <com.google.android.material.button.MaterialButton
-            style="@style/Button.Text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:enabled="false"
-            android:text="Button.Text disabled"
-            app:icon="@drawable/ic_close" />
-
-        <com.google.android.material.button.MaterialButton
-            style="@style/Button.Text.Small"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:enabled="false"
-            android:text="Button.Text.Small disabled" />
-
-        <com.google.android.material.button.MaterialButton
-            style="@style/Button.Text.Small"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:enabled="false"
-            android:text="Button.Text.Small disabled"
-            app:icon="@drawable/ic_close" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

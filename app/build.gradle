@@ -90,9 +90,9 @@ android {
         }
     }
 
-
     dynamicFeatures = [':shop', ':shop', ':browse', ':browse', ':orderagain', ':savings', ':home', ':stores', ':specsheet']
 }
+
 
 
 dependencies {
