@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'androidx.navigation.safeargs.kotlin'
+    id 'org.jetbrains.dokka'
 }
 apply from: "../feature_module.gradle"
 
@@ -26,7 +27,6 @@ dependencies {
     implementation supportDependencies.design
     implementation supportDependencies.fragment
     implementation supportDependencies.navigationUi
-    implementation ui.lottie
     implementation ui.constraintLayout
 
     implementation injection.dagger
