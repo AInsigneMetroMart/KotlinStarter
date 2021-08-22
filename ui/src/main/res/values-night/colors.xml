@@ -1,71 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="primary">@color/palette_green_400</color>
-    <color name="primary_variant">@color/palette_green_500</color>
+    <color name="primary">@color/palette_primary_500</color>
+    <color name="primary_variant">@color/palette_primary_600</color>
     <color name="color_on_primary">@color/white</color>
 
-    <color name="secondary">@color/palette_green_400</color>
-    <color name="secondary_variant">@color/palette_green_300</color>
-    <color name="color_on_secondary">@color/white</color>
+    <color name="secondary">@color/palette_red_700</color>
+    <color name="secondary_variant">@color/palette_red_400</color>
+    <color name="color_on_secondary">@color/text_secondary</color>
 
     <color name="accent">@color/palette_primary_100</color>
 
-    <color name="surface">@color/bg_secondary</color>
+    <color name="surface">@color/white</color>
     <color name="color_on_surface">@color/text_primary</color>
 
     <!-- backgrounds  -->
-    <color name="bg_primary">@color/palette_black_100</color>
-    <color name="color_on_bg_primary">@color/text_primary</color>
+    <color name="bg_primary">@color/white</color>
+    <color name="color_on_bg_primary">@color/palette_black_200</color>
 
-    <color name="bg_secondary">@color/palette_black_200</color>
-    <color name="bg_tertiary">@color/palette_black_300</color>
+    <color name="bg_secondary">@color/palette_black_1100</color>
+    <color name="bg_tertiary">@color/palette_black_1200</color>
 
-    <color name="inline_error">@color/palette_maroon_200</color>
-    <color name="color_on_error">@color/black</color>
+    <color name="inline_error">@color/palette_red_200</color>
+    <color name="color_on_error">@color/white</color>
 
     <color name="color_on_bg_notification">@color/text_secondary</color>
 
-    <color name="calendar_weekdays_cells">@color/palette_black_100</color>
-    <color name="calendar_weekend_cells">@color/palette_black_200</color>
 
     <!-- buttons  -->
-    <color name="btn_action">@color/palette_primary_300</color>
+    <color name="btn_action">@color/palette_primary_200</color>
 
     <!-- text  -->
-    <color name="text_primary">@color/palette_brown_600</color>
-    <color name="text_secondary">@color/palette_brown_500</color>
-    <color name="text_tertiary">@color/palette_brown_400</color>
-    <color name="text_action">@color/palette_primary_300</color>
-    <color name="text_disabled">@color/palette_brown_400</color>
-    <color name="text_critical">@color/palette_red_300</color>
+    <color name="text_primary">@color/white</color>
+    <color name="text_secondary">@color/palette_red_400</color>
+    <color name="text_tertiary">@color/palette_primary_500</color>
+    <color name="text_action">@color/white</color>
+    <color name="text_disabled">@color/white</color>
+    <color name="text_critical">@color/palette_red_200</color>
 
-    <color name="btn_primary">@color/palette_black_700</color>
-    <color name="btn_primary_disabled">@color/palette_black_500</color>
+    <color name="btn_primary">@color/primary</color>
+    <color name="btn_primary_disabled">@color/palette_black_900</color>
 
-    <color name="btn_secondary">@color/palette_black_500</color>
-    <color name="btn_secondary_disabled">@color/palette_black_300</color>
+    <color name="btn_secondary">@color/palette_black_100</color>
+    <color name="btn_secondary_disabled">@color/palette_black_500</color>
 
-    <color name="text_hint">@color/palette_brown_400</color>
+    <color name="text_hint">@color/palette_black_300</color>
     <color name="text_notification_primary">@color/txt_on_primary_button</color>
     <!-- icons  -->
     <color name="icon_primary">@color/text_primary</color>
 
     <color name="card_bg">@color/bg_secondary</color>
 
-    <color name="divider">@color/palette_black_400</color>
-    <color name="calendar_divider">@color/palette_black_500</color>
+    <color name="divider">@color/palette_black_900</color>
 
-    <color name="txt_on_primary_button">@color/palette_black_100</color>
-    <color name="txt_on_primary_button_disabled">@color/palette_black_100</color>
-    <color name="txt_on_secondary_button">@color/palette_brown_500</color>
-    <color name="txt_on_secondary_button_disabled">@color/palette_black_500</color>
+    <color name="txt_on_primary_button">@color/white</color>
+    <color name="txt_on_primary_button_disabled">@color/white</color>
+    <color name="txt_on_secondary_button">@color/white</color>
+    <color name="txt_on_secondary_button_disabled">@color/palette_black_1300</color>
 
-    <color name="input_bg_outline_focused">@color/palette_green_400</color>
-    <color name="input_bg_outline_enabled">@color/palette_brown_600</color>
-    <color name="input_bg_outline_disabled">@color/palette_brown_500</color>
+    <color name="input_bg_outline_focused">@color/palette_black_900</color>
+    <color name="input_bg_outline_enabled">@color/palette_black_300</color>
+    <color name="input_bg_outline_disabled">@color/palette_black_400</color>
 
-    <color name="input_bg_focused">@color/palette_black_300</color>
-    <color name="input_bg_enabled">@color/palette_black_300</color>
-    <color name="input_bg_disabled">@color/palette_black_200</color>
+    <color name="input_bg_focused">@color/palette_black_800</color>
+    <color name="input_bg_enabled">@color/palette_black_900</color>
+    <color name="input_bg_disabled">@color/palette_black_900</color>
 </resources>
