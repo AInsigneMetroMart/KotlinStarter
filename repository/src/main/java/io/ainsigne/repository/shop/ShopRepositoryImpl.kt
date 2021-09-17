@@ -6,18 +6,41 @@ import io.ainsigne.utilities.Constants
 import kotlinx.coroutines.flow.Flow
 import java.lang.Exception
 
+/**
+ * Repository implementation of [ShopRepository] interface
+ * for making use of services to make an api call
+ * and dao to cache the shop list response
+ * @param shopService [ShopService] the service to call the api for shop related calls
+ * @param shopsDao [ShopsDao] the dao for caching the shop list response
+ */
 class ShopRepositoryImpl(
     private val shopService: ShopService,
     private val shopsDao: ShopsDao
 ) : ShopRepository {
+
+    /**
+     * Populates the list of shops under an area id from cache
+     * @param areaId of [String] area id to identify the list of shops returned
+     * @return [Flow]<[List]<[Shop]>> the list of shops under an area id
+     */
     override fun watchShops(areaId: String): Flow<List<Shop>> {
         return shopsDao.watchShops(areaId)
     }
 
+    /**
+     * Populates the shop identified by shop id from cache
+     * @param shopId of [String] shop id to identify the shop returned
+     * @return [Flow]<[Shop]> the shop with the shop id
+     */
     override fun watchShop(shopId: String): Flow<Shop> {
         return shopsDao.watchShop(shopId)
     }
 
+    /**
+     * Refreshes the shops to be shop under an area id
+     * @param areaId of [String] to identify the list of shops to cache
+     * @return [Int] the number of shops returned
+     */
     override suspend fun refreshShops(areaId: String): Int {
         val response =
             shopService.getShopsByAreaId(header = "Token ${Constants.token}", area_id = areaId)
@@ -33,7 +56,6 @@ class ShopRepositoryImpl(
                             //Timber.d(" Shop has active ${it.attributes.name} $id ")
                         }
                     }
-
                     Shop(
                         id = it.id,
                         areaId = areaId,

@@ -48,13 +48,6 @@ class HomeActivity : BaseActivity(){
         binding.navView.setupWithNavController(navController)
 
         observeNavigation()
-//        intent.extras?.getString(shop_id)?.let {
-//            navController.addOnDestinationChangedListener { _, destination, arguments ->
-//                val argument = NavArgument.Builder().setDefaultValue(it).build()
-//                destination.addArgument(shop_id, argument)
-//            }
-//        }
-
 
     }
 

@@ -69,8 +69,12 @@ ext {
             mockito    : 'org.mockito:mockito-core:2.19.0',
             commons    : 'org.apache.commons:commons-io:1.3.2',
             cortest    : 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.3.7',
-
-            coretest   : 'androidx.arch.core:core-testing:2.1.0'
+            junitext   : 'androidx.test.ext:junit:1.1.3',
+            coretest   : 'androidx.arch.core:core-testing:2.1.0',
+            espresso   : 'androidx.test.espresso:espresso-core:3.4.0',
+            testrule   : 'androidx.test:rules:1.3.0',
+            testrunner : 'androidx.test:runner:1.3.0',
+            testcore   : 'androidx.test:core-ktx:1.3.0'
     ]
 
     ui = [
